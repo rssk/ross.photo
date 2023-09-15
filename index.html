@@ -27,8 +27,6 @@
   #menu {
     position: fixed;
     width: 10%;
-    height: calc(100% - 50px); /* Reduce the height by approximately the header's height */
-    top: 50px; /* Push the menu down by approximately the header's height */
     z-index: 1; /* Below the header but above content */
   }
 
@@ -58,7 +56,7 @@
   }
 
   .menu-item:hover {
-    text-decoration: line-through;
+    text-decoration: none;
   }
 
   /* Mobile adjustments */
@@ -73,14 +71,14 @@
     }
 
     .photo-container img {
-        height: 100vh;
-        object-fit: cover; /* Adjusts image scaling */
+      height: 100vh;
+      object-fit: cover; /* Adjusts image scaling */
     }
 
     .photo-container {
-        display: flex;
-        flex-direction: column;
-        gap: 10px; /* Decrease gap for mobile */
+      display: flex;
+      flex-direction: column;
+      gap: 10px; /* Decrease gap for mobile */
     }
 
     #content {
@@ -95,18 +93,31 @@
     }
   }
   .photo-container {
-      display: flex;
-      flex-direction: column;
-      gap: 50px; /* Decrease gap for mobile */
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Decrease gap for mobile */
   }
 
   .photo-container img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      object-fit: contain;
-      max-height: 100vh; /* Allow images to grow to max of viewport height, but no more */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    max-height: 100vh; /* Allow images to grow to max of viewport height, but no more */
+  }
+  .photo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers the title under the photo */
+  }
+
+  .photo-title {
+    margin-top: 10px; /* Add some space between the photo and its title */
+    text-align: center;
+    font-style: italic;
+    font-size: 1em; /* Adjust the font size as desired */
+    color: black; /* Adjust the font color as desired */
   }
   </style>
 </head>
@@ -123,23 +134,88 @@
   <div id="content">
     <section id="photos">
       <div class="photo-container">
-        <img src="img/4.jpg" alt="Photo 4">
-        <img src="img/1.jpg" alt="Photo 1">
-        <img src="img/9.jpg" alt="Photo 9">
-        <img src="img/2.jpg" alt="Photo 2">
-        <img src="img/3.jpg" alt="Photo 3">
-        <img src="img/5.jpg" alt="Photo 5">
-        <img src="img/6.jpg" alt="Photo 6">
-        <img src="img/17.jpg" alt="Photo 17">
-        <img src="img/7.jpg" alt="Photo 7">
-        <img src="img/8.jpg" alt="Photo 8">
-        <img src="img/10.jpg" alt="Photo 10">
-        <img src="img/11.jpg" alt="Photo 11">
-        <img src="img/12.jpg" alt="Photo 12">
-        <img src="img/13.jpg" alt="Photo 13">
-        <img src="img/14.jpg" alt="Photo 14">
-        <img src="img/15.jpg" alt="Photo 15">
-        <img src="img/16.jpg" alt="Photo 16">
+        <div class="photo-container">
+            <div class="photo-item">
+                <img src="img/4.jpg" alt="Photo 4">
+                <p class="photo-title">Untitled </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/1.jpg" alt="Photo 1">
+                <p class="photo-title">Untitled #13 </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/9.jpg" alt="Photo 9">
+                <p class="photo-title">dancing</p>
+            </div>
+            <div class="photo-item">
+                <img src="img/18.jpg" alt="Photo 18">
+                <p class="photo-title">your personal angel </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/19.jpg" alt="Photo 19">
+                <p class="photo-title">dancing #2 </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/20.jpg" alt="Photo 20">
+                <p class="photo-title">Untilted #14 </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/2.jpg" alt="Photo 2">
+                <p class="photo-title">Locked </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/3.jpg" alt="Photo 3">
+                <p class="photo-title">title fight </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/5.jpg" alt="Photo 5">
+                <p class="photo-title">Untitled #5 </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/6.jpg" alt="Photo 6">
+                <p class="photo-title">Untitled #4 </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/17.jpg" alt="Photo 17">
+                <p class="photo-title">worse </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/7.jpg" alt="Photo 7">
+                <p class="photo-title">Untitled #2 </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/8.jpg" alt="Photo 8">
+                <p class="photo-title">Untitled #3 </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/10.jpg" alt="Photo 10">
+                <p class="photo-title">Untitled #6 </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/11.jpg" alt="Photo 11">
+                <p class="photo-title">Untitled #7 </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/12.jpg" alt="Photo 12">
+                <p class="photo-title">Untitled #8 </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/13.jpg" alt="Photo 13">
+                <p class="photo-title">Untitled #9 </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/14.jpg" alt="Photo 14">
+                <p class="photo-title">Untitled #10 </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/15.jpg" alt="Photo 15">
+                <p class="photo-title">Untitled #11 </p>
+            </div>
+            <div class="photo-item">
+                <img src="img/16.jpg" alt="Photo 16">
+                <p class="photo-title">Untitled #12 </p>
+            </div>
+        </div>
       </div>
     </section>
     <section id="contact">
